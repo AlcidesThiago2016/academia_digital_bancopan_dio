@@ -1,6 +1,7 @@
 package pan.dio.academia.academia_digital.service;
 
 import pan.dio.academia.academia_digital.entity.Aluno;
+import pan.dio.academia.academia_digital.entity.AvaliacaoFisica;
 import pan.dio.academia.academia_digital.entity.form.AlunoForm;
 import pan.dio.academia.academia_digital.entity.form.AlunoUpdateForm;
 
