@@ -1,8 +1,6 @@
 package pan.dio.academia.academia_digital.entity.form;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,19 +13,19 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class AlunoForm {
 
-    @NotBlank(message = "Preencha o campo corretamente.")
+    @NotEmpty(message = "Preencha o campo corretamente.")
     @Size(min = 3, max = 50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
     private String nome;
 
-    @NotBlank(message = "Preencha o campo corretamente.")
+    @NotEmpty(message = "Preencha o campo corretamente.")
     @CPF(message = "'${validatedValue}' e inválido!")
     private String cpf;
 
-    @NotBlank(message = "Preencha o campo corretamente.")
+    @NotEmpty(message = "Preencha o campo corretamente.")
     @Size(min = 3, max = 50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
     private String bairro;
 
-    @NotBlank(message = "Preencha o campo corretamente.")
+    @NotNull(message = "Preencha o campo corretamente.")
     @Past(message = "Data '${validatedValue}' é inválida.")
     private LocalDate dataDeNascimento;
 }
