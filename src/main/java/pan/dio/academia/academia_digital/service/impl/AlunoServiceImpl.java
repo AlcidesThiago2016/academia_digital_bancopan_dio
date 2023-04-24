@@ -3,6 +3,7 @@ package pan.dio.academia.academia_digital.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pan.dio.academia.academia_digital.entity.Aluno;
+import pan.dio.academia.academia_digital.entity.AvaliacaoFisica;
 import pan.dio.academia.academia_digital.entity.form.AlunoForm;
 import pan.dio.academia.academia_digital.entity.form.AlunoUpdateForm;
 import pan.dio.academia.academia_digital.repository.AlunoRepository;
@@ -47,5 +48,12 @@ public class AlunoServiceImpl implements IAlunoService {
     @Override
     public void delete(Long id) {
 
+    }
+
+    @Override
+    public List<AvaliacaoFisica> getAvaliacaoFisicaId(Long id) {
+
+        Aluno aluno = repository.findById(id).get();
+        return aluno.getAvaliacoes();
     }
 }
