@@ -29,7 +29,8 @@ public interface IAvaliacaoFisicaService {
      * @return - Uma lista com todas as avaliações física que estão salvas no bd.
      */
 
-    List<AvaliacaoFisica> gerAll();
+    List<AvaliacaoFisica> getAll();
+
 
     /**
      * Atualiza a avaliação física.
@@ -47,5 +48,6 @@ public interface IAvaliacaoFisicaService {
      */
 
     void delete(Long id);
+
 
 }

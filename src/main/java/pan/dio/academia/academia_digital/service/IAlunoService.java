@@ -29,7 +29,7 @@ public interface IAlunoService {
      * @return - Uma lista dos alunos que estão salvas no DB.
      */
 
-    List<Aluno> getAll();
+    List<Aluno> getAll(String dataDeNascimento);
 
     /**
      * Atualiza o aluno.
